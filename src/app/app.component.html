@@ -1,0 +1,14 @@
+<header>
+<h1 [innerHTML]="dynamicGlobals.siteName"></h1>
+<nav>
+    <ul>
+        <li *ngFor="let item of dynamicGlobals.mainMenu">
+            <a [routerLink]="[item.url]">{{item.title}}</a>
+        </li>
+    </ul>
+</nav>
+</header>
+<router-outlet></router-outlet>
+<footer>
+    wpangular.com
+</footer>
