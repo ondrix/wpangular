@@ -26,7 +26,7 @@ export class AuthorizationInterceptor implements HttpInterceptor {
         }
 
         // Detect - create or update post 
-        if(req.url.includes('/wp/v2/posts')){
+        if(req.url.includes('/wp/v2/byty')){
             requiresAuthToken = true; 
             console.log('Identified a create or update post request');
         }

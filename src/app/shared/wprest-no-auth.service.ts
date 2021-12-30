@@ -29,23 +29,23 @@ export class WprestNoAuthService {
   // POSTS
 
   getPosts(page){
-    return this.httpClient.get(ConstantGlobals.WP_API_BASE + '/wp/v2/posts?per_page=10&page='+page, {observe: 'response'});
+    return this.httpClient.get(ConstantGlobals.WP_API_BASE + '/wp/v2/byty?per_page=10&page='+page, {observe: 'response'});
   }
 
   getPostsInCategory(categoryId,page){
-    return this.httpClient.get(ConstantGlobals.WP_API_BASE + '/wp/v2/posts?categories='+categoryId+'&per_page=10&page='+page, {observe: 'response'});
+    return this.httpClient.get(ConstantGlobals.WP_API_BASE + '/wp/v2/byty?categories='+categoryId+'&per_page=10&page='+page, {observe: 'response'});
   }
 
   getPostsInTag(tagId,page){
-    return this.httpClient.get(ConstantGlobals.WP_API_BASE + '/wp/v2/posts?tags='+tagId+'&per_page=10&page='+page, {observe: 'response'});
+    return this.httpClient.get(ConstantGlobals.WP_API_BASE + '/wp/v2/byty?tags='+tagId+'&per_page=10&page='+page, {observe: 'response'});
   }
 
   getPostById(id){
-    return this.httpClient.get(ConstantGlobals.WP_API_BASE + '/wp/v2/posts/'+id, {observe: 'response'});
+    return this.httpClient.get(ConstantGlobals.WP_API_BASE + '/wp/v2/byty/'+id, {observe: 'response'});
   }
 
   getPostBySlug(slug){
-    return this.httpClient.get(ConstantGlobals.WP_API_BASE + '/wp/v2/posts?slug='+slug, {observe: 'response'});
+    return this.httpClient.get(ConstantGlobals.WP_API_BASE + '/wp/v2/byty?slug='+slug, {observe: 'response'});
   }
 
 

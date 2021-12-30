@@ -38,7 +38,7 @@ export class WprestWithAuthService {
       }
 
     // Send POST request
-    return this.httpClient.post(ConstantGlobals.WP_API_BASE + '/wp/v2/posts',newPost);
+    return this.httpClient.post(ConstantGlobals.WP_API_BASE + '/wp/v2/byty',newPost);
   }
 
   // Update an existing post
@@ -50,7 +50,7 @@ export class WprestWithAuthService {
       }
 
     // Send POST request
-    return this.httpClient.post(ConstantGlobals.WP_API_BASE + '/wp/v2/posts/5/',newPost);
+    return this.httpClient.post(ConstantGlobals.WP_API_BASE + '/wp/v2/byty/5/',newPost);
   }
 
 
