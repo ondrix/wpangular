@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit, OnDestroy{
     private wprestWithAuthSrv: WprestWithAuthService,
     private router: Router) { }
 
+  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
   ngOnInit() {
   }
 
