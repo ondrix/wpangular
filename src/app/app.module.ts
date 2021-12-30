@@ -11,7 +11,6 @@ import { AppComponent } from './app.component';
 import { CacheInterceptor } from './shared/cache.interceptor';
 import { AuthorizationInterceptor } from './shared/authorization.interceptor';
 import { RoutesDispatcherComponent } from './routes-dispatcher/routes-dispatcher.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 
@@ -24,7 +23,6 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true },
