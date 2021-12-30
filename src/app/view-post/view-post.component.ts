@@ -17,6 +17,7 @@ export class ViewPostComponent implements OnInit, OnDestroy{
   private unsubscribeOnDestroy: Subject<void> = new Subject();
 
   post;
+  meta;
   postId;
 
   constructor(
@@ -33,6 +34,7 @@ export class ViewPostComponent implements OnInit, OnDestroy{
     this.wprestNoAuthSrv.getPostById(this.postId).pipe(takeUntil(this.unsubscribeOnDestroy)).subscribe((data)=>{
       console.log('Post component loded ', data.body);
       this.post = <Post>data.body;
+      this.meta = this.post.meta_box;
     });
 
   }

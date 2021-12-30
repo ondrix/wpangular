@@ -26,17 +26,17 @@ export class CacheInterceptor implements HttpInterceptor {
 
 
         // Detect - getPostBySlug requests for special caching 
-        if(req.url.includes('/wp/v2/byty?slug=')){
+        if(req.url.includes('/wp/v2/persons?slug=')){
             requestType = 'get-post-by-slug';
-            requestParam = req.url.replace(ConstantGlobals.WP_API_BASE + '/wp/v2/byty?slug=','');
+            requestParam = req.url.replace(ConstantGlobals.WP_API_BASE + '/wp/v2/persons?slug=','');
             
             console.log('Identified a get-post-by-slug request with slug ' + requestParam);
         }
 
         // Detect - getPostById requests for special caching 
-        if(req.url.includes('/wp/v2/byty/')){
+        if(req.url.includes('/wp/v2/persons/')){
             requestType = 'get-post-by-id';
-            requestParam = req.url.replace(ConstantGlobals.WP_API_BASE + '/wp/v2/byty/','');
+            requestParam = req.url.replace(ConstantGlobals.WP_API_BASE + '/wp/v2/persons/','');
 
             console.log('Identified a get-post-by-id request with id ' + requestParam);
         }

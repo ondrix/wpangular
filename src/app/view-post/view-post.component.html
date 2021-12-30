@@ -5,8 +5,8 @@
     </section>
     <article>
         <figure><img *ngIf="post.featured_img_url" [src]="post.featured_img_url"></figure>
-        <h1 [innerHTML]="post.title.rendered"></h1>
-        <div [innerHTML]="post.meta_box.standard_apartments_text"></div>
+        <h1>{{post.title.rendered}}</h1>
+        <div>{{meta.name}}</div>
 
         <!-- <div [innerHTML]="post.content.rendered"></div> -->
     </article>
