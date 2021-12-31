@@ -1,8 +1,14 @@
 <?php
 
 include get_template_directory() . "/inc/rest.php";
+
 include get_template_directory() . "/plugins/index.php";
 include get_template_directory() . "/post-types/index.php";
+include get_template_directory() . "/page-templates/index.php";
+
+require_once get_template_directory() . "/inc/custom/disable-comments.php";
+require_once get_template_directory() . "/inc/custom/disable-editor.php";
+require_once get_template_directory() . "/inc/custom/widgets.php";
 
 // Enable Featured Images
 function wpangular_post_thumbnails()
