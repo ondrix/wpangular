@@ -1,0 +1,4 @@
+<section *ngIf="persons">
+    <div *ngFor="let person of persons" [routerLink]="[person.slug]">{{person.meta_box.name}}
+    </div>
+</section>

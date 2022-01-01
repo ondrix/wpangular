@@ -14,12 +14,18 @@ import { RoutesDispatcherComponent } from './routes-dispatcher/routes-dispatcher
 import { environment } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { APP_BASE_HREF } from '@angular/common';
+import { HomeComponent } from './pages/home/home.component';
+import { PersonListComponent } from './posts/person-list/person-list.component';
+import { PersonComponent } from './posts/person/person.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RoutesDispatcherComponent
+    RoutesDispatcherComponent,
+    HomeComponent,
+    PersonListComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,9 @@
 // @angular modules
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { PersonListComponent } from './posts/person-list/person-list.component';
+import { PersonComponent } from './posts/person/person.component';
 
 // Routes dispatcher component
 import { RoutesDispatcherComponent } from './routes-dispatcher/routes-dispatcher.component';
@@ -11,7 +14,16 @@ const routes: Routes = [
   {
   path: '',
   pathMatch: 'full',
-  loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  component: HomeComponent
+  },
+  {
+    path: 'zoznam-navstevnikov',
+    pathMatch: 'full',
+    component: PersonListComponent,
+  },
+  {
+    path: "zoznam-navstevnikov/:slug",
+    component: PersonComponent
   },
   {
   path: 'login',
