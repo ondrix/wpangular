@@ -8,9 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // Cache interceptor
-import { CacheInterceptor } from './shared/cache.interceptor';
-import { AuthorizationInterceptor } from './shared/authorization.interceptor';
-import { RoutesDispatcherComponent } from './routes-dispatcher/routes-dispatcher.component';
 import { environment } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { APP_BASE_HREF } from '@angular/common';
@@ -22,7 +19,6 @@ import { PersonComponent } from './posts/person/person.component';
 @NgModule({
   declarations: [
     AppComponent,
-    RoutesDispatcherComponent,
     HomeComponent,
     PersonListComponent,
     PersonComponent
@@ -39,8 +35,6 @@ import { PersonComponent } from './posts/person/person.component';
     }),
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: AuthorizationInterceptor, multi: true },
     { provide: APP_BASE_HREF, useValue: '/' }
   ],
   bootstrap: [AppComponent]

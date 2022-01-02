@@ -17,7 +17,7 @@ export class PersonComponent implements OnInit {
     const slug = this.route.snapshot.paramMap.get('slug');
     this.restApi.getPost(slug, 'persons')
       .subscribe(response => {
-        this.person = response.pop();
+        this.person = response;
       });
   }
 
