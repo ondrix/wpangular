@@ -14,6 +14,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { HomeComponent } from './pages/home/home.component';
 import { PersonListComponent } from './posts/person-list/person-list.component';
 import { PersonComponent } from './posts/person/person.component';
+import { MbImageAdvancedComponent } from './components/mb-image-advanced/mb-image-advanced.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { PersonComponent } from './posts/person/person.component';
     AppComponent,
     HomeComponent,
     PersonListComponent,
-    PersonComponent
+    PersonComponent,
+    MbImageAdvancedComponent
   ],
   imports: [
     BrowserModule,

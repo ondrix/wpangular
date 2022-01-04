@@ -2,7 +2,6 @@
 <section *ngIf="page">
     <h2>{{page.title.rendered}}</h2>
     <button>{{page.meta_box.banner_btn_text}}</button>
-    {{page.meta_box.banner_bg.file}}
-    <img [src]="page.meta_box.banner_bg[0].full_url"/>
+    <app-mb-image-advanced [image]="page.meta_box.banner_bg"></app-mb-image-advanced>
 
 </section>
